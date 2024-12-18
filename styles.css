@@ -1,0 +1,118 @@
+/* Reset CSS untuk memastikan tampilan yang konsisten di semua perangkat */
+body, h1, h2, p, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Gaya font ramah anak */
+    background-color: #fdfd96; /* Warna kuning pastel untuk latar belakang */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Memastikan body memenuhi tinggi layar */
+}
+
+.header {
+    background-color: #ff6f61; /* Warna merah cerah */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.8rem; /* Ukuran judul diperbesar */
+}
+
+.content {
+    text-align: center;
+    padding: 2rem;
+    flex: 1; /* Mengisi ruang kosong di antara header dan footer */
+}
+
+.content p {
+    font-size: 1.2rem; /* Ukuran teks diperbesar */
+    font-weight: bold; /* Membuat teks lebih tebal agar lebih jelas */
+    margin-bottom: 1.5rem; /* Menambah jarak bawah agar lebih rapi */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background-color: #ffdab9; /* Warna peach lembut */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efek membesar saat dihover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    color: #ff6f61; /* Warna judul di kartu */
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: #ff6f61; /* Warna merah cerah */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #e55b50; /* Warna hover lebih gelap */
+    transform: translateY(-3px); /* Sedikit mengangkat tombol */
+}
+
+/* Penyesuaian agar tombol kembali ke menu utama berada di tengah */
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: #ff6f61; /* Warna footer sama dengan header */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Memastikan footer selalu di bawah */
+    font-size: 0.9rem;
+}
+/* Media Query untuk layar dengan lebar maksimum 600px (ukuran mobile) */
+@media screen and (max-width: 600px) {
+    .header {
+        font-size: 1.5rem; /* Perkecil ukuran font header */
+        padding: 0.5rem; /* Kurangi padding header */
+    }
+
+    .content p {
+        font-size: 1rem; /* Sesuaikan ukuran teks */
+    }
+
+    .card-container {
+        flex-direction: column; /* Susun kartu ke bawah */
+        gap: 1rem; /* Tambahkan jarak antar kartu */
+    }
+
+    .card {
+        width: 80%; /* Lebarkan kartu agar lebih proporsional */
+        margin: 0 auto; /* Pusatkan kartu */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Perkecil ukuran tombol */
+        padding: 0.4rem 0.8rem; /* Kurangi padding tombol */
+    }
+}
